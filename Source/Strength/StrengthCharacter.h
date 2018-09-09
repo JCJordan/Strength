@@ -6,6 +6,9 @@
 #include "GameFramework/Character.h"
 #include "StrengthCharacter.generated.h"
 
+class FStatus;
+class FInventory;
+
 UCLASS(config=Game)
 class AStrengthCharacter : public ACharacter
 {
@@ -90,6 +93,11 @@ private:
 	void SetupCollisionDefaults();
 
 #pragma endregion Camera
+
+private:
+
+	FStatus Status;
+	FInventory Inventory;
 
 };
 
