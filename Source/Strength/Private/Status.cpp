@@ -2,10 +2,17 @@
 
 #include "Status.h"
 
-FStatus::FStatus()
-{
+UStatus::UStatus(){
+
+	SetDefaultStats();
+
 }
 
-FStatus::~FStatus()
-{
+void UStatus::SetDefaultStats() {
+
+	MaxHealth = 100;
+	CurrentHealth = 90;
+
 }
+
+

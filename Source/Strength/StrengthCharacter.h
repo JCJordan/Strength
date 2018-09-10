@@ -6,8 +6,7 @@
 #include "GameFramework/Character.h"
 #include "StrengthCharacter.generated.h"
 
-class FStatus;
-class FInventory;
+class UStatus;
 
 UCLASS(config=Game)
 class AStrengthCharacter : public ACharacter
@@ -96,8 +95,13 @@ private:
 
 private:
 
-	FStatus Status;
-	FInventory Inventory;
+	UPROPERTY(VisibleAnywhere, Category = "Status")
+	UStatus* Status = nullptr;
+
+public:
+
+	UFUNCTION(BlueprintPure, Category = "Status")
+	UStatus* GetStatus() const { return Status; }
 
 };
 

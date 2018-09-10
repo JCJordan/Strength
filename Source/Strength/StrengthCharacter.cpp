@@ -8,7 +8,6 @@
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Status.h"
-#include "Inventory.h"
 
 AStrengthCharacter::AStrengthCharacter()
 {
@@ -17,6 +16,8 @@ AStrengthCharacter::AStrengthCharacter()
 	SetupInputDefaults();
 	SetupMovementDefaults();
 	SetupCameraDefaults();	
+
+	Status = CreateDefaultSubobject<UStatus>(FName("Status"));
 
 }
 
