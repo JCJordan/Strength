@@ -96,9 +96,14 @@ private:
 
 private:
 
-	UPROPERTY(VisibleAnywhere, Category = "Status")
+
+	//Note: If showing as null then restart editor. Likely due to compile resetting references bug if window open.
+
+	// Status Ref
+	UPROPERTY(VisibleDefaultsOnly, Category = "Status")
 	UStatus* Status = nullptr;
-	UPROPERTY(VisibleAnywhere, Category = "Inventory")
+	// Inventory Ref
+	UPROPERTY(VisibleDefaultsOnly, Category = "Inventory")
 	UInventory* Inventory = nullptr;
 
 public:

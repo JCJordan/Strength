@@ -14,10 +14,6 @@ class STRENGTH_API UStatus : public UObject
 {
 	GENERATED_BODY()
 
-public:
-
-	UStatus();
-
 private:
 
 	int32 Level = 1;
@@ -38,8 +34,6 @@ private:
 
 	int32 CurrentXP = 0;
 	int32 XPToNextLevel = 1000;
-
-	void SetDefaultStats();
 
 public:
 
