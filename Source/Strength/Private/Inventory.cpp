@@ -26,5 +26,10 @@ bool UInventory::AddItemToInventory(UItem* Item) {
 
 void UInventory::LoadDebugItems() {
 
+	FItemFactory ItemFactory;
+	
+	for (int i = 0; i < 3; i++) {
+		AddItemToInventory(ItemFactory.CreateNewItem(0));
+	}
 
 }
