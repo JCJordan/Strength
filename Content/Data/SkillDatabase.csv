@@ -1,0 +1,10 @@
+﻿,ID,Name,Description,BaseDamage
+1,0,DEBUG,Instant-Kill,9999
+2,1,Punch,Standard Fighter Punch,10
+3,2,Fireball,Throw fire at target,20
+4,3,Ice Strike,Launch a beam of ice at target,30
+5,4,Thunder,Strike target with Lightning bolt,40
+6,5,Earthquake,Rupture the ground below the target,50
+7,6,Poison,Inflict poison effect on target,1
+8,7,Heal,Heal self,-10
+9,8,Test,Test move,0
