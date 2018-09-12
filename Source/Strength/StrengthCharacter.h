@@ -7,6 +7,7 @@
 #include "StrengthCharacter.generated.h"
 
 class UStatus;
+class UInventory;
 
 UCLASS(config=Game)
 class AStrengthCharacter : public ACharacter
@@ -97,11 +98,15 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Status")
 	UStatus* Status = nullptr;
+	UPROPERTY(VisibleAnywhere, Category = "Inventory")
+	UInventory* Inventory = nullptr;
 
 public:
 
 	UFUNCTION(BlueprintPure, Category = "Status")
 	UStatus* GetStatus() const { return Status; }
+	UFUNCTION(BlueprintPure, Category = "Inventory")
+	UInventory* GetInventory() const { return Inventory; }
 
 };
 
