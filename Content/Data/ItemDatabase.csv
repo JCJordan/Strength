@@ -1,0 +1,7 @@
+"				",ID,Name,Description,Category
+1,0,DEBUG,"""Clears Area""",DEBUG
+2,1,Health Potion,"""Use to restore a medium amount of Health""",Recovery
+3,2,Mana Potion,"""Use to restore a medium amount of Mana""",Recovery
+4,3,Old Key," ""Must unlock something important, keep a tight hold of it.""",Key
+5,4,Bomb,"""Use in battle to inflict a lot of damage to an enemy!""",Attack
+6,5,Escape Rope,"""Return to the entrance of the current area/dungeon.""",Utility
