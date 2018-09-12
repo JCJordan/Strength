@@ -7,6 +7,8 @@
 #include "Engine/DataTable.h"
 #include "Item.generated.h"
 
+struct FItemData;
+
 /**
  * 
  */
@@ -18,15 +20,30 @@ class STRENGTH_API UItem : public UObject
 public:
 
 	UItem();
+	void Initialise(FItemData* ItemData);
 
 private:
 
 	int32 ID = 0;
 	FString Name = "";
 	FString Description = "";
-	int32 Category = 0;
+	FString Category = "";
+
+};
+
+class STRENGTH_API FItemFactory
+{
+
+public:
+
+	FItemFactory();
+	UItem* CreateNewItem(int32 ItemID);
+
+
+private:
 
 	bool LoadItemDatabase();
+	TArray<FItemData*> ItemDatabase;
 
 };
 
