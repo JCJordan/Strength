@@ -22,6 +22,15 @@ public:
 	UItem();
 	void Initialise(FItemData* ItemData);
 
+	UFUNCTION(BlueprintPure, Category = "Item")
+	int32 GetID() const { return ID; };
+	UFUNCTION(BlueprintPure, Category = "Item")
+	FString GetName() const { return Name; };
+	UFUNCTION(BlueprintPure, Category = "Item")
+	FString GetDescription() const { return Description; };
+	UFUNCTION(BlueprintPure, Category = "Item")
+	FString GetCategory() const { return Category; };
+
 private:
 
 	int32 ID = 0;
