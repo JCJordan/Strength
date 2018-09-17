@@ -12,7 +12,7 @@ struct FItemData;
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class STRENGTH_API UItem : public UObject
 {
 	GENERATED_BODY()
