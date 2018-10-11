@@ -14,6 +14,7 @@ void UItem::Initialise(FItemData* ItemData) {
 	this->Name = ItemData->Name;
 	this->Description = ItemData->Description;
 	this->Category = ItemData->Category;
+	this->Usage = ItemData->Usage;
 
 }
 
@@ -25,6 +26,7 @@ FItemFactory::FItemFactory() {
 
 bool FItemFactory::LoadItemDatabase() {
 
+	// Try to read from .csv if datatable not loaded/inaccurate
 	FString DataTablePath = "DataTable '/Game/Data/ItemDatabase.ItemDatabase'";
 
 	UDataTable* DataTable = ConstructorHelpersInternal::FindOrLoadObject<UDataTable>(DataTablePath);

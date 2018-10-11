@@ -24,6 +24,18 @@ bool UInventory::AddItemToInventory(UItem* Item) {
 	return true;
 }
 
+bool UInventory::RemoveItemFromInventory(UItem* Item) {
+	if (!Item) { return false; }
+	Items.Remove(Item);
+	return true;
+}
+
+bool UInventory::RemoveItemFromInventoryByIndex(int32 Index) {
+	if (!GetItemAtIndex(Index)) { return false; }
+	Items.RemoveAt(Index);
+	return true;
+}
+
 void UInventory::LoadDebugItems() {
 
 	FItemFactory ItemFactory;

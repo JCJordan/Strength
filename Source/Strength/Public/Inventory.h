@@ -24,8 +24,12 @@ public:
 	TArray<UItem*> GetAllItems() const { return Items; };
 	UFUNCTION(BlueprintPure, Category = "Inventory")
 	UItem* GetItemAtIndex(int32 Index) const;
-	UFUNCTION(BlueprintPure, Category = "Inventory")
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	bool AddItemToInventory(UItem* Item);
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	bool RemoveItemFromInventory(UItem* Item);
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	bool RemoveItemFromInventoryByIndex(int32 Index);
 	void LoadDebugItems();
 
 private:

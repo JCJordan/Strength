@@ -30,6 +30,8 @@ public:
 	FString GetDescription() const { return Description; };
 	UFUNCTION(BlueprintPure, Category = "Item")
 	FString GetCategory() const { return Category; };
+	UFUNCTION(BlueprintPure, Category = "Item")
+	FString GetUsage() const { return Usage; };
 
 private:
 
@@ -37,6 +39,7 @@ private:
 	FString Name = "";
 	FString Description = "";
 	FString Category = "";
+	FString Usage = "";
 
 };
 
@@ -68,6 +71,7 @@ public:
 		, Name("")
 		, Description("")
 		, Category("")
+		, Usage("")
 	{}
 
 	/** The 'Name' column is the same as the XP Level */
@@ -85,5 +89,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Items")
 		FString Category;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Items")
+		FString Usage;
 
 };
