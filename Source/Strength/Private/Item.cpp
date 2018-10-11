@@ -45,7 +45,7 @@ UItem* FItemFactory::CreateNewItem(int32 ItemID) {
 	if (!ItemData) { UE_LOG(LogTemp, Error, TEXT("ItemData for ItemID %i is Null!"), ItemID); return nullptr; }
 	UItem* Item = NewObject<UItem>();
 	Item->Initialise(ItemData);
-	UE_LOG(LogTemp, Warning, TEXT("Created object with name: %s"), *ItemData->Name);
+	//UE_LOG(LogTemp, Warning, TEXT("Created object with name: %s"), *ItemData->Name);
 	return Item;
 
 }

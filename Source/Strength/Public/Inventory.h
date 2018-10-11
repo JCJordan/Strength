@@ -30,6 +30,8 @@ public:
 	bool RemoveItemFromInventory(UItem* Item);
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	bool RemoveItemFromInventoryByIndex(int32 Index);
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	bool SortByField(FString Field, bool Ascending);
 	void LoadDebugItems();
 
 private:
