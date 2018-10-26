@@ -1,7 +1,7 @@
-"				",ID,Name,Description,Category,Usage
-1,0,DEBUG,"""Clears Area""",DEBUG,"""You completed the game!"""
-2,1,Health Potion,"""Use to restore a medium amount of Health""",Recovery,"""You recovered some health"""
-3,2,Mana Potion,"""Use to restore a medium amount of Mana""",Recovery,"""You recovered some mana"""
-4,3,Old Key," ""Must unlock something important, keep a tight hold of it.""",Key,"""Now is not the right time to use that"""
-5,4,Bomb,"""Use in battle to inflict a lot of damage to an enemy!""",Attack,"""You made a huge explosion!"""
-6,5,Escape Rope,"""Return to the entrance of the current area/dungeon.""",Utility,"""You returned to the entrance"""
+"				",ID,Name,Description,Category,Usage,IconFilename
+1,0,DEBUG,"""Clears Area""",DEBUG,"""You completed the game!""",Debug
+2,1,Health Potion,"""Use to restore a medium amount of Health""",Recovery,"""You recovered some health""",Health_Potion
+3,2,Mana Potion,"""Use to restore a medium amount of Mana""",Recovery,"""You recovered some mana""",Mana_Potion
+4,3,Old Key," ""Must unlock something important, keep a tight hold of it.""",Key,"""Now is not the right time to use that""",Old_Key
+5,4,Bomb,"""Use in battle to inflict a lot of damage to an enemy!""",Attack,"""You made a huge explosion!""",Bomb
+6,5,Escape Rope,"""Return to the entrance of the current area/dungeon.""",Utility,"""You returned to the entrance""",Escape_Rope

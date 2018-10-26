@@ -3,6 +3,8 @@
 #include "Item.h"
 #include "UObject/ConstructorHelpers.h"
 #include "UObject/UObjectGlobals.h"
+#include "Engine/Texture2D.h"
+#include "Engine/ObjectLibrary.h"
 
 UItem::UItem() {
 
@@ -15,6 +17,7 @@ void UItem::Initialise(FItemData* ItemData) {
 	this->Description = ItemData->Description;
 	this->Category = ItemData->Category;
 	this->Usage = ItemData->Usage;
+	this->IconTexture = GetTextureFromFilename(ItemData->IconFilename);
 
 }
 
@@ -47,5 +50,26 @@ UItem* FItemFactory::CreateNewItem(int32 ItemID) {
 	Item->Initialise(ItemData);
 	//UE_LOG(LogTemp, Warning, TEXT("Created object with name: %s"), *ItemData->Name);
 	return Item;
+
+}
+
+UTexture2D* UItem::GetTextureFromFilename(FString Filename) {
+
+	//TODO Don't load this everytime
+	UObjectLibrary* TextureLibrary = UObjectLibrary::CreateLibrary(UTexture2D::StaticClass(), true, GIsEditor);
+
+	FString IconPath = "/Game/UI/Icons";
+	TextureLibrary->LoadAssetDataFromPath(IconPath);
+
+	TArray<FAssetData> AssetData;
+	TextureLibrary->GetAssetDataList(AssetData);
+	for (FAssetData& Asset : AssetData) {
+		if (Asset.AssetName.ToString() == Filename) {
+			UTexture2D* Texture = dynamic_cast<UTexture2D*>(Asset.GetAsset());
+			if (Texture) { return Texture; }
+		}
+	}
+
+	return nullptr;
 
 }

@@ -8,6 +8,7 @@
 #include "Item.generated.h"
 
 struct FItemData;
+class UTexture2D;
 
 /**
  * 
@@ -32,6 +33,8 @@ public:
 	FString GetCategory() const { return Category; };
 	UFUNCTION(BlueprintPure, Category = "Item")
 	FString GetUsage() const { return Usage; };
+	UFUNCTION(BlueprintPure, Category = "Item")
+	UTexture2D* GetIconTexture() const { return IconTexture; };
 
 private:
 
@@ -40,6 +43,9 @@ private:
 	FString Description = "";
 	FString Category = "";
 	FString Usage = "";
+	UTexture2D* IconTexture = nullptr;
+
+	UTexture2D* GetTextureFromFilename(FString Filename);
 
 };
 
@@ -72,6 +78,7 @@ public:
 		, Description("")
 		, Category("")
 		, Usage("")
+		, IconFilename("")
 	{}
 
 	/** The 'Name' column is the same as the XP Level */
@@ -92,5 +99,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Items")
 		FString Usage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Items")
+		FString IconFilename;
 
 };
